@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toddlers & Tween's
+        Haven Nursery and
+        Primary School</title>
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/tt (2).png"> 
+</head>
+<body1>
+    <div class="form-container">
+        <div class="header1">
+            <img src="images/tt (2).png" alt="School Logo" class="logo1">
+            <h1>ADMISSION FORM</h1>
+        </div>
+
+        <h2>1. CHILD'S PARTICULARS</h2>
+        <form>
+            <label>Child’s surname:</label>
+            <input type="text" name="surname"><br>
+
+            <label>Other names:</label>
+            <input type="text" name="other_names"><br>
+
+            <label>Date of birth:</label>
+            <input type="text" name="dob">
+            <label>Age:</label>
+            <input type="text" name="age"><br>
+
+            <label>Nationality:</label>
+            <input type="text" name="nationality">
+            <label>Gender:</label>
+            <input type="text" name="gender"><br>
+
+            <label>Home District:</label>
+            <input type="text" name="home_district">
+            <label>County/Division:</label>
+            <input type="text" name="county_division"><br>
+
+            <label>Parish:</label>
+            <input type="text" name="parish">
+            <label>Village/Zone:</label>
+            <input type="text" name="village_zone"><br>
+
+            <label>Religion:</label>
+            <input type="text" name="religion"><br>
+
+            <label>Class into which admission is being sought:</label>
+            <input type="text" name="class"><br>
+
+            <label>Previous schools attended if any:</label><br>
+            <label>a)</label>
+            <input type="text" name="previous_school_a"><br>
+            <label>b)</label>
+            <input type="text" name="previous_school_b"><br>
+
+            <label>Position in the family (1st Born, 2nd ...):</label>
+            <input type="text" name="position"><br>
+
+            <h2>2. PARENTS' / GUARDIAN'S PARTICULARS</h2>
+
+            <h3>A. Father's name:</h3>
+            <label>i) Address:</label>
+            <input type="text" name="father_address"><br>
+            <label>ii) Occupation:</label>
+            <input type="text" name="father_occupation"><br>
+            <label>iii) Place of work:</label>
+            <input type="text" name="father_work"><br>
+            <label>iv) Contact number:</label>
+            <input type="text" name="father_contact"><br>
+            <label>v) NIN:</label>
+            <input type="text" name="father_nin"><br>
+
+            <h3>B. Mother's name:</h3>
+            <label>i) Address:</label>
+            <input type="text" name="mother_address"><br>
+            <label>ii) Occupation:</label>
+            <input type="text" name="mother_occupation"><br>
+            <label>iii) Place of work:</label>
+            <input type="text" name="mother_work"><br>
+
+            <h3>C. Nearest person to be contacted in absence of parents:</h3>
+            <label>i) Name:</label>
+            <input type="text" name="contact_person"><br>
+            <label>ii) Residence:</label>
+            <input type="text" name="contact_residence"><br>
+            <label>iii) Contact number:</label>
+            <input type="text" name="contact_number"><br>
+
+            <h3>3. Special Case</h3>
+            <label>Please notify us about any special case:</label><br>
+            <textarea name="special_case" rows="3"></textarea><br>
+
+            <h3>4. Allergies</h3>
+            <label>Does the Child have any allergies to food or fruit? If yes, please mention below:</label><br>
+            <textarea name="allergies" rows="2"></textarea><br>
+
+            <h3>5. Medical Insurance</h3>
+            <label>Does your child have medical insurance/personal doctor?</label><br>
+            <input type="text" name="doctor"><br>
+            <label>Name of doctor/hospital/insurance company:</label><br>
+            <textarea name="insurance" rows="2"></textarea><br>
+            <label>Phone number:</label>
+            <input type="text" name="insurance_phone"><br>
+
+            <h3>6. Image and Video Parental Consent</h3>
+            <p>Photographs and videos of school events are posted regularly on the school website, newsletters, and social media pages 
+                with other publications for promotion of teh School at no pay to the parent or the child. Do you give consent for your child's photos and videos to be included on our website, social medai pages, newsletters , national news papers and any 
+                other school approved publications.
+            </p>
+            <label>
+                <input type="checkbox" name="consent" value="photos"> Allow photos
+            </label><br>
+            <label>
+                <input type="checkbox" name="consent" value="videos"> Allow videos
+            </label><br>
+            <label>
+                <input type="checkbox" name="consent" value="none"> Do not allow
+            </label>
+        </form>
+    </div>
+</body>
+</html>                 using this html come up wi the css that put the logo to the center , images at the bottom right and left , with a bottom background like grass structure arranged as a form would be 
+            <!-- Submit button -->
+            <button type="button" id="applyButton">Apply</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with your public key
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+
+        document.getElementById("applyButton").addEventListener("click", function() {
+            // Send form data via EmailJS
+            var form = document.getElementById("admissionForm");
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Thank you for contacting us!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('An error occurred, please try again.');
+                });
+        });
+    </script>
+
+
+
+ <!-----------------------------------footer------------------------>
+           
+ <footer class="footer">
+        
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p1>Let's stay connected</p1><br>
+      <br><p1><a href="tel:0393 193465">0393 193465</a></p1><br>
+      <p1><a href="tel:_+256752 525503">(+256) 0752 525503</a></p1><br>
+      <p1><a href="tel:+256704 560780">(+256) 0704 560780</a></p>
+      <a href="mailto:toddlershavenkindergarten1@gmail.com">toddlershavenkindergarten1@gmail.com</a>
+    </div>
+  
+    <div class="footer-column">
+      <h3>Connect with us on social media</h3>
+      <p1>VJinja Road, Mukono, Kampala.<br>P.O.Box 7490, Kampala, Uganda.</p1>
+      <div class="icons">
+        <a href="https://www.facebook.com/profile.php?id=100087004612577" target="_blank">
+            <i class="fa fa-facebook-f"></i>
+        </a>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+    </div>
+    </div>
+  
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p1> We are located along Jinja Road, Mukono, Kampala.<br>P.O.Box 7490, Kampala, Uganda.</p>
+      <p1>&copy; 2024 Toddlers Tweens | All rights reserved <span class="heart">❤️</span> by <a href="#">SGR</a></p1>
+    </div>
+    <div class="footer-column">
+        <h3>Useful information</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About us.html">About us</a></li>
+                    <li><a href="Our team.html">Our Team</a></li>
+            
+            
+           
+            <li><a href="Admission.html">Admission</a> </li>
+                    <li><a href="fees.html">fees</a></li>
+                
+           
+                
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="app.html">apply</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+        </ul>
+      </div>
+  </footer>
+</body1>
+</html>
